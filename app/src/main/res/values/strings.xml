@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Swipe Assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_add_product">Add Product</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_type">Product Type</string>
+    <string name="selling_price">Selling Price</string>
+    <string name="product_images">Product Images</string>
+    <string name="product_image_must_be_png_or_gpeg_recommended_1024_px_by_1024_px_or_1_1_aspect_ratio">Product Image must be PNG or GPEG , recommended 1024 px by 1024 px or 1:1 aspect ratio</string>
+    <string name="tax_rate">Tax Rate %</string>
+    <string name="_100000">₹100000</string>
+    <string name="err_msg_enter_product_name">Please enter product name.</string>
+    <string name="err_msg_enter_product_price">Please enter product price</string>
+    <string name="err_msg_select_type">Select Product Type</string>
+    <string name="err_msg_enter_tex">Please enter tex rate</string>
+    <string name="new_product">NEW PRODUCT</string>
+    <string name="read_storage_permission_dened">Oops, you just denied the permission for storage.You can also allow it from settings.</string>
+    <string name="image_selection_failed">Image Selection Failed</string>
+</resources>

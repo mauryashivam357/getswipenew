@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".view.fragments.AddProductFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="17dp"
+        android:gravity="start"
+        android:text="Type"
+        android:textAlignment="viewStart"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="horizontal"
+        android:outlineAmbientShadowColor="@color/purple_500"
+        android:outlineSpotShadowColor="@color/purple_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <RadioButton
+            android:id="@+id/radioButtonProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:selectAllOnFocus="true"
+            android:text="Product"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/radioButtonService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Service" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="268dp" />
+
+    <TextView
+        android:textColor="@color/purple_500"
+        android:id="@+id/tv_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Product Name"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_product_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="@string/product_name"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_product_name"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/til_selling_price"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+    <TextView
+        android:id="@+id/tv_selling_price"
+        android:layout_width="0dp"
+        android:textColor="@color/purple_500"
+        android:layout_height="15dp"
+        android:layout_margin="12dp"
+        android:text="@string/selling_price"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_product_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_selling_price"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="@string/_100000"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selling_price">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_selling_price"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_product_images"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:text="@string/product_images"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_selling_price" />
+
+
+    <TextView
+        android:id="@+id/tv_tax_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="7dp"
+        android:textColor="@color/purple_500"
+        android:text="@string/tax_rate"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_selling_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tax_rate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="0.0"
+        app:layout_constraintBaseline_toBaselineOf="@id/til_selling_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tax_rate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_tax_rate"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_product_mages_dis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/product_image_must_be_png_or_gpeg_recommended_1024_px_by_1024_px_or_1_1_aspect_ratio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_images" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_mages_dis">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="3dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/image_background"
+                android:src="@drawable/ic_add_image" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="3dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/image_background"
+                android:src="@drawable/ic_add_image" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="3dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/image_background"
+                android:src="@drawable/ic_add_image" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="3dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/image_background"
+                android:src="@drawable/ic_add_image" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="3dp"
+                android:background="@drawable/image_background"
+                android:layout_margin="2dp"
+                android:src="@drawable/ic_add_image" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="3dp"
+                android:background="@drawable/image_background"
+                android:layout_margin="2dp"
+                android:src="@drawable/ic_add_image" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="100dp"
+                android:padding="4dp"
+                android:background="@drawable/image_background"
+                android:layout_margin="2dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_add_image" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD PRODUCT"
+        android:textColor="@color/primary_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
